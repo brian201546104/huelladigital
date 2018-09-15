@@ -1,9 +1,13 @@
 from flask import Flask
 app = Flask(__name__)
-@app.route('/hola',methods=['GET'])
-def hola(contra):
+
+@app.route('/')
+def entra(contra):
     return 'huelladigital' 
-@app.route('/saludo/<nombre>',methods=['GET'])
+@app.route('/hola')
+def hola(contra):
+    return 'hola' 
+@app.route('/saludo/<nombre>')
 def saludo(nombre):
     return 'Hola ' + nombre + '!!!'
 
