@@ -1,10 +1,15 @@
 from flask import Flask
 app = Flask(__name__)
 
-
-@app.route('/<nombre>')
-def saludo(nombre):
-    return 'Hola ' + nombre + '!!!'
+@app.route('/')
+def entra():
+    return 'huelladigital' 
+@app.route('/hola')
+def hola():
+    return 'hola' 
+@app.route('/metio/<nombre>')
+def metio(nombre):
+    return 'inserto' + nombre 
 
 if __name__ == '__main__':
   app.run()
