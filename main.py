@@ -1,8 +1,9 @@
 from flask import Flask
 app = Flask(__name__)
-@app.route('/ingrese/<contra>',methods=['GET'])
-def ingrese(contra):
-    return 'ingreso contraseña' + contra 
+
+@app.route('/saludo/<nombre>',methods=['GET'])
+def saludo(nombre):
+    return 'Hola ' + nombre + '!!!'
 
 if __name__ == '__main__':
   app.run()
