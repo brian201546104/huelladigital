@@ -2,7 +2,7 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def entra(contra):
+def entra():
     return 'huelladigital' 
 
 
