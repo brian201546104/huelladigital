@@ -9,7 +9,7 @@ def hola():
     return 'hola' 
 @app.route('/metio/<nombre>')
 def metio(nombre):
-    return 'inserto' + nombre 
+    return 'inserto %s'% nombre 
 
 if __name__ == '__main__':
   app.run()
